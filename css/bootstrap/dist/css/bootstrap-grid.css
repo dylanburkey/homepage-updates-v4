@@ -203,47 +203,73 @@ body {
   overflow-y: scroll;
 }
 
-header[role="banner"] #search {
-  float: right;
-  margin-top: 9px;
-  width: 250px;
-}
-
-header[role="banner"] .search {
-  padding: 5px 0;
-  width: 230px;
-  height: 30px;
+header[role="banner"] .navbar-collapse {
   position: relative;
-  left: 10px;
-  float: left;
-  line-height: 22px;
+  padding-top: 30px !important;
+  max-height: 270px;
 }
 
-header[role="banner"] .search input {
+header[role="banner"] .navbar-collapse form[role="search"] {
   position: absolute;
-  width: 0px;
-  float: Left;
-  margin-left: 210px;
-  -webkit-transition: all 0.7s ease-in-out;
-  -o-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
-  height: 30px;
-  line-height: 18px;
-  padding: 0 2px 0 2px;
-  border-radius: 1px;
+  top: 15px;
+  right: 10px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  z-index: 0;
+  background: none !important;
 }
 
-header[role="banner"] .search:hover input, header[role="banner"] .search input:focus {
-  width: 200px;
-  margin-left: 0px;
+header[role="banner"] .navbar-collapse form[role="search"] button {
+  padding: 8px 12px;
+  border-radius: 0px;
+  border-width: 0px;
+  color: #BE1E2D;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none !important;
+  outline: none;
 }
 
-header[role="banner"] .btn {
-  height: 30px;
-  position: absolute;
-  right: 0;
-  top: 5px;
-  border-radius: 1px;
+header[role="banner"] .navbar-collapse form[role="search"] input {
+  padding: 16px 12px;
+  font-size: 15px;
+  font-style: normal;
+  color: #333;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+header[role="banner"] .navbar-collapse form[role="search"] button[type="reset"] {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  header[role="banner"] .navbar-collapse {
+    padding-top: 0px !important;
+    padding-right: 38px !important;
+  }
+  header[role="banner"] .navbar-collapse form[role="search"] {
+    width: 38px;
+  }
+  header[role="banner"] .navbar-collapse form[role="search"] input {
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0;
+    display: none;
+  }
+  header[role="banner"] .navbar-collapse form[role="search"].active {
+    width: 100%;
+  }
+  header[role="banner"] .navbar-collapse form[role="search"].active button,
+  header[role="banner"] .navbar-collapse form[role="search"].active input {
+    display: table-cell;
+    opacity: 1;
+  }
+  header[role="banner"] .navbar-collapse form[role="search"].active input {
+    width: 70%;
+  }
 }
 
 .container {

@@ -281,48 +281,74 @@ body {
        }
 
        header[role="banner"]{
-         #search {
-             float: right;
-             margin-top: 9px;
-             width: 250px;
-         }
+          .navbar-collapse {
+           position: relative;
+           padding-top: 30px !important;
+           max-height: 270px;
+          }
+          .navbar-collapse form[role="search"] {
+           position: absolute;
+           top: 15px;
+           right: 10px;
+           width: 100%;
+           padding: 0px;
+           margin: 0px;
+           z-index: 0;
+           background: none !important;
+          }
+          .navbar-collapse form[role="search"] button,
+           {
+           padding: 8px 12px;
+           border-radius: 0px;
+           border-width: 0px;
+           color: $brand-primary;
+           //background-color: $light-grey;
+           //border-color: $light-black;
+           box-shadow: none;
+           background: none !important;
+           outline: none;
+          }
+          .navbar-collapse form[role="search"] input {
+           padding: 16px 12px;
+           font-size: 15px;
+           font-style: normal;
+           color: $light-black;
+           box-shadow: none;
+          }
+          .navbar-collapse form[role="search"] button[type="reset"] {
+           display: none;
+          }
 
-         .search {
-             padding: 5px 0;
-             width: 230px;
-             height: 30px;
-             position: relative;
-             left: 10px;
-             float: left;
-             line-height: 22px;
-         }
-
-             .search input {
-                 position: absolute;
-                 width: 0px;
-                 float: Left;
-                 margin-left: 210px;
-                 -webkit-transition: all 0.7s ease-in-out;
-                 -moz-transition: all 0.7s ease-in-out;
-                 -o-transition: all 0.7s ease-in-out;
-                 transition: all 0.7s ease-in-out;
-                 height: 30px;
-                 line-height: 18px;
-                 padding: 0 2px 0 2px;
-                 border-radius:1px;
-             }
-
-                 .search:hover input, .search input:focus {
-                     width: 200px;
-                     margin-left: 0px;
-                 }
-
-         .btn {
-             height: 30px;
-             position: absolute;
-             right: 0;
-             top: 5px;
-             border-radius:1px;
-         }
+          @media (min-width: 768px) {
+           .navbar-collapse {
+             padding-top: 0px !important;
+             padding-right: 38px !important;
+           }
+           .navbar-collapse form[role="search"] {
+             width: 38px;
+           }
+           .navbar-collapse form[role="search"] button,
+           .navbar-collapse form[role="search"] input {
+            // padding: 15px 12px;
+           }
+           .navbar-collapse form[role="search"] input {
+             padding: 10px 12px;
+             font-size: 14px;
+             line-height: 1.6;
+             opacity: 0;
+             display: none;
+           }
+           .navbar-collapse form[role="search"].active {
+             width: 100%;
+           }
+           .navbar-collapse form[role="search"].active button,
+           .navbar-collapse form[role="search"].active input {
+             display: table-cell;
+             opacity: 1;
+           }
+             .navbar-collapse form[role="search"].active input {
+             width: 70%;
+           }
+          }
 
        }
