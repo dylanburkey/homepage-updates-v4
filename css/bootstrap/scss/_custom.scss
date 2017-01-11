@@ -281,63 +281,48 @@ body {
        }
 
        header[role="banner"]{
+         #search {
+             float: right;
+             margin-top: 9px;
+             width: 250px;
+         }
 
-.search {
-  width: 12em;
-  height: 2em;
-  padding: 0;
-  margin: 0;
-  line-height: 2em;
-  background-color: #fff;
-  position: relative;
-  transition: all .25s linear;
-  input {
-    width: 9.5em;
-    height: 2em;
-    line-height: 1em;
-    padding: 0 0 0 .5em;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    font-size: 1em;
-    color: #333;
-    float: left;
-    transition: all .25s linear;
-  }
-  a {
-    width: 2em;
-    height: 2em;
-    line-height: 2em;
-    padding: 0;
-    color: #ccc;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: all .25s linear;
-    &:before {
-      content: "\f002";
-      font-family: FontAwesome;
-      font-style: normal;
-    }
-    &:hover {
-      color: #eee;
-    }
-  }
-  &.collapsed {
-    width: 2em;
-    margin-left: 10em;
-    input {
-      width: 0;
-    }
-    a {
-      color: #999;
-      &:hover {
-        color: #bbb;
-      }
-    }
-  }
-}
+         .search {
+             padding: 5px 0;
+             width: 230px;
+             height: 30px;
+             position: relative;
+             left: 10px;
+             float: left;
+             line-height: 22px;
+         }
+
+             .search input {
+                 position: absolute;
+                 width: 0px;
+                 float: Left;
+                 margin-left: 210px;
+                 -webkit-transition: all 0.7s ease-in-out;
+                 -moz-transition: all 0.7s ease-in-out;
+                 -o-transition: all 0.7s ease-in-out;
+                 transition: all 0.7s ease-in-out;
+                 height: 30px;
+                 line-height: 18px;
+                 padding: 0 2px 0 2px;
+                 border-radius:1px;
+             }
+
+                 .search:hover input, .search input:focus {
+                     width: 200px;
+                     margin-left: 0px;
+                 }
+
+         .btn {
+             height: 30px;
+             position: absolute;
+             right: 0;
+             top: 5px;
+             border-radius:1px;
+         }
+
        }

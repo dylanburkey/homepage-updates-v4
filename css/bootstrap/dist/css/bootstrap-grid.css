@@ -203,77 +203,47 @@ body {
   overflow-y: scroll;
 }
 
+header[role="banner"] #search {
+  float: right;
+  margin-top: 9px;
+  width: 250px;
+}
+
 header[role="banner"] .search {
-  width: 12em;
-  height: 2em;
-  padding: 0;
-  margin: 0;
-  line-height: 2em;
-  background-color: #fff;
+  padding: 5px 0;
+  width: 230px;
+  height: 30px;
   position: relative;
-  -webkit-transition: all .25s linear;
-  -o-transition: all .25s linear;
-  transition: all .25s linear;
+  left: 10px;
+  float: left;
+  line-height: 22px;
 }
 
 header[role="banner"] .search input {
-  width: 9.5em;
-  height: 2em;
-  line-height: 1em;
-  padding: 0 0 0 .5em;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  font-size: 1em;
-  color: #333;
-  float: left;
-  -webkit-transition: all .25s linear;
-  -o-transition: all .25s linear;
-  transition: all .25s linear;
-}
-
-header[role="banner"] .search a {
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  padding: 0;
-  color: #ccc;
-  text-align: center;
-  text-decoration: none;
-  display: block;
   position: absolute;
-  top: 0;
+  width: 0px;
+  float: Left;
+  margin-left: 210px;
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  height: 30px;
+  line-height: 18px;
+  padding: 0 2px 0 2px;
+  border-radius: 1px;
+}
+
+header[role="banner"] .search:hover input, header[role="banner"] .search input:focus {
+  width: 200px;
+  margin-left: 0px;
+}
+
+header[role="banner"] .btn {
+  height: 30px;
+  position: absolute;
   right: 0;
-  -webkit-transition: all .25s linear;
-  -o-transition: all .25s linear;
-  transition: all .25s linear;
-}
-
-header[role="banner"] .search a:before {
-  content: "\f002";
-  font-family: FontAwesome;
-  font-style: normal;
-}
-
-header[role="banner"] .search a:hover {
-  color: #eee;
-}
-
-header[role="banner"] .search.collapsed {
-  width: 2em;
-  margin-left: 10em;
-}
-
-header[role="banner"] .search.collapsed input {
-  width: 0;
-}
-
-header[role="banner"] .search.collapsed a {
-  color: #999;
-}
-
-header[role="banner"] .search.collapsed a:hover {
-  color: #bbb;
+  top: 5px;
+  border-radius: 1px;
 }
 
 .container {

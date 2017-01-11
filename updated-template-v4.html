@@ -66,6 +66,8 @@
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<!-- ss -->
+
 <body class="master--homepage">
     <div class="master-container">
         <div class="container container--header">
@@ -138,15 +140,23 @@
                                         <li class="dropdown-menu--item"><a href="#0">locate service shop</a></li>
                                         <li class="dropdown-menu--item"><a href="#0">contact us</a></li>
                                         <li class="dropdown-menu--item"><a href="#0">browse all support resources</a></li>
-
                                     </ul>
                                 </li>
-                                <li class="dropdown-menu--item"><div class="search collapsed">
+                              <!--  <li class="dropdown-menu--item"><div class="search collapsed">
     <input type="text" placeholder="Search">
-    <a></a>
+    <a class="navbar-link" href="#"></a>
   </div>
-  </li>
-                              <!---  <li><a class="navbar-link" data-type="text" data-placement="right" data-title="search" id="search" href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+</li> -->
+
+<!-- Original Search Glyph
+<li><a class="navbar-link" data-type="text" data-placement="right" data-title="search" id="search" href="#"> <input type="search" placeholder="Search" class="search collapsed"> <span class="glyphicon glyphicon-search"></span></a></li>
+
+ -->
+
+<div class="search">
+<input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />
+<button type="submit" class="btn btn-primary btn-sm">Search</button>
+</div>
 
                             </ul>
                         </nav>
@@ -626,11 +636,11 @@
         $('.dropdown-toggle').dropdown()
     </script>
 
-    <script type="text/javascript">
+  <!--  <script type="text/javascript">
     $(".search a").click(function() {
 $(this).parent(".search").toggleClass("collapsed");
 });
-    </script>
+    </script> -->
 
     <script type="text/javascript" src="http://www.lincolnelectric.com/assets/us/en/interactive/_sliders/bottom-right/engine1/jquery.js"></script>
     <script type="text/javascript" src="http://www.lincolnelectric.com/assets/us/en/interactive/_sliders/bottom-right/engine1/script.js"></script>
