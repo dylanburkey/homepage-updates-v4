@@ -212,13 +212,17 @@ header[role="banner"] .navbar-collapse {
 
 header[role="banner"] .navbar-collapse form[role="search"] {
   position: absolute;
-  top: 15px;
   right: 10px;
   width: 100%;
   padding: 0px;
   margin: 0px;
   z-index: 0;
   background: none !important;
+}
+
+header[role="banner"] .navbar-collapse form[role="search"] .glyphicon-search,
+header[role="banner"] .navbar-collapse form[role="search"] .glyphicon-remove {
+  top: 15px;
 }
 
 header[role="banner"] .navbar-collapse form[role="search"] button {
@@ -257,9 +261,10 @@ header[role="banner"] .navbar-collapse form[role="search"] button[type="reset"] 
     line-height: 1.6;
     opacity: 0;
     display: none;
+    width: 79%;
   }
   header[role="banner"] .navbar-collapse form[role="search"].active {
-    width: 100%;
+    width: auto;
   }
   header[role="banner"] .navbar-collapse form[role="search"].active button,
   header[role="banner"] .navbar-collapse form[role="search"].active input {
@@ -269,6 +274,23 @@ header[role="banner"] .navbar-collapse form[role="search"] button[type="reset"] 
   header[role="banner"] .navbar-collapse form[role="search"].active input {
     width: 70%;
   }
+  header[role="banner"] .navbar-collapse form[role="search"] input#primary-search {
+    width: 110%;
+    top: 3px;
+    height: 4em;
+    background: #ccc;
+    color: #333;
+    font-weight: bold;
+  }
+  header[role="banner"] .navbar-collapse form[role="search"] input#primary-search:focus {
+    outline: none !important;
+    border: none !important;
+  }
+}
+
+.form-control:focus {
+  border-color: none !important;
+  outline: none !important;
 }
 
 .flex-xs-first {

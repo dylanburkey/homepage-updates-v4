@@ -287,14 +287,22 @@ body {
            max-height: 270px;
           }
           .navbar-collapse form[role="search"] {
+            // Search Icon
+
            position: absolute;
-           top: 15px;
            right: 10px;
            width: 100%;
            padding: 0px;
            margin: 0px;
            z-index: 0;
            background: none !important;
+
+           // Search Icon
+           .glyphicon-search,
+           .glyphicon-remove {
+             top: 15px;
+           }
+
           }
           .navbar-collapse form[role="search"] button,
            {
@@ -337,9 +345,10 @@ body {
              line-height: 1.6;
              opacity: 0;
              display: none;
+             width: 79%;
            }
            .navbar-collapse form[role="search"].active {
-             width: 100%;
+             width: auto;
            }
            .navbar-collapse form[role="search"].active button,
            .navbar-collapse form[role="search"].active input {
@@ -349,6 +358,28 @@ body {
              .navbar-collapse form[role="search"].active input {
              width: 70%;
            }
+
+             .navbar-collapse form[role="search"] input#primary-search {
+               width: 110%;
+               top: 3px;
+               height: 4em;
+               background: $dark-grey;
+               color: $light-black;
+               font-weight: bold;
+               &:focus
+                {
+                  outline:none !important;
+                  border: none !important;
+                  }
+             }
           }
 
+
+       }
+
+       // Trumps
+
+       .form-control:focus {
+         border-color: none !important;
+         outline: none !important;
        }
