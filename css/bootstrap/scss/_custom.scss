@@ -12,6 +12,8 @@ $light-black: #333;
 $base-white: #fff;
 $light-grey: #ddd;
 
+$lighter-grey: #e6e7e8;
+
 
 /**
  * Social Media Colors
@@ -360,10 +362,10 @@ body {
            }
 
              .navbar-collapse form[role="search"] input#primary-search {
-               width: 110%;
-               top: 3px;
-               height: 4em;
-               background: $dark-grey;
+               width: 100%;
+               top: 10px;
+               height: 3.5em;
+               background: $lighter-grey;
                color: $light-black;
                font-weight: bold;
                &:focus
