@@ -86,12 +86,24 @@
                                     <li class="dropdown">
                                       <a class="navbar-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">myLincoln</a>
                                         <ul class="dropdown-menu">
-                                          <li><a href="#0"> <input type="search" placeholder="PARTNER NUMBER(PAYER)"> </a></li>
-                                          <li><a href="#0"></a></li>
-                                          <li><a href="#0"></a></li>
-                                          <li><a href="#0"></a></li>
-                                          <li><a href="#0"></a></li>
-                                          <li><a href="#0">logout</a></li>
+                                          <div class="partner-number">
+                                            <div class="partner-number--heading">
+                                                <p class="h5">partner number (payer):</p>
+                                                <p class="h3">010101010010129</p>
+                                            </div>
+                                          </div>
+                                          <li><a href="#0">home</a></li>
+                                          <li><a href="#0">my messages</a></li>
+                                          <li><a href="#0">my cart</a></li>
+                                          <li><a href="#0">my account</a></li>
+                                          <li><a href="#0">my order status</a></li>
+                                          <li><a href="#0">my shopping list</a></li>
+                                          <li><a href="#0">online ordering</a></li>
+                                          <li><a href="#0">operator manuals</a></li>
+                                          <li><a href="#0">check price</a></li>
+                                          <li><a href="#0">warranty search</a></li>
+                                          <li><a href="#0">parts search</a></li>
+                                          <li><a href="#0">log out</a></li>
                                         </ul>
                                     </li>
 
@@ -656,11 +668,43 @@
         $('.dropdown-toggle').dropdown()
     </script>
 
-  <!--  <script type="text/javascript">
-    $(".search a").click(function() {
-$(this).parent(".search").toggleClass("collapsed");
-});
-    </script> -->
+ <script type="text/javascript">
+ $(function () {
+     // Remove Search if user Resets Form or hits Escape!
+ $('body, .navbar-collapse form[role="search"] button[type="reset"]').on('click keyup', function(event) {
+   console.log(event.currentTarget);
+   if (event.which == 27 && $('.navbar-collapse form[role="search"]').hasClass('active') ||
+     $(event.currentTarget).attr('type') == 'reset') {
+     closeSearch();
+   }
+ });
+
+ function closeSearch() {
+         var $form = $('.navbar-collapse form[role="search"].active')
+     $form.find('input').val('');
+   $form.removeClass('active');
+ }
+
+ // Show Search if form is not active // event.preventDefault() is important, this prevents the form from submitting
+ $(document).on('click', '.navbar-collapse form[role="search"]:not(.active) button[type="submit"]', function(event) {
+   event.preventDefault();
+   var $form = $(this).closest('form'),
+     $input = $form.find('input');
+   $form.addClass('active');
+   $input.focus();
+
+ });
+ // ONLY FOR DEMO // Please use $('form').submit(function(event)) to track from submission
+ // if your form is ajax remember to call `closeSearch()` to close the search container
+ $(document).on('click', '.navbar-collapse form[role="search"].active button[type="submit"]', function(event) {
+   event.preventDefault();
+   var $form = $(this).closest('form'),
+     $input = $form.find('input');
+   $('#showSearchTerm').text($input.val());
+         closeSearch()
+ });
+ });
+    </script>
 
     <script type="text/javascript" src="http://www.lincolnelectric.com/assets/us/en/interactive/_sliders/bottom-right/engine1/jquery.js"></script>
     <script type="text/javascript" src="http://www.lincolnelectric.com/assets/us/en/interactive/_sliders/bottom-right/engine1/script.js"></script>
